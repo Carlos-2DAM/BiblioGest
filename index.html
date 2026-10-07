@@ -2,127 +2,183 @@
 <html lang="es">
 
 <head>
-    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BiblioGest - Panel Principal (Dashboard)</title>
+    <title>BiblioGest - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    
 </head>
 
 <body>
-    <!-- Cabecera general de la aplicación BiblioGest -->
-    <header>
-        <h1>BiblioGest</h1>
-        <p>Sistema de Gestión de Biblioteca</p>
-    </header>
-
-    <!-- Menú lateral de navegación principal -->
+    <!-- Menú Lateral -->
     <aside>
+        <h1>BiblioGest</h1>
         <nav>
-            <h2>Menú principal</h2>
             <ul>
-                <li><a href="#dashboard">Panel Principal</a></li>
-                <li><a href="#socios">Gestión de Socios</a></li>
-                <li><a href="#catalogo">Catálogo de Libros</a></li>
-                <li><a href="#prestamos">Préstamos y Devoluciones</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#prestamos">Préstamos</a></li>
+                <li><a href="#socios">Socios</a></li>
                 <li><a href="#configuracion">Configuración</a></li>
             </ul>
         </nav>
+
+        <!-- Perfil de usuario (footer) -->
+        <div>
+            <p><strong>Bibliotecario / Admin</strong></p>
+            <p><h5>Sesión activa</h5></p>
+        </div>
     </aside>
 
     <main>
-        <section id="dashboard">
-            <h2>Panel Principal</h2>
-            <p>Resumen general del estado del catálogo, socios y préstamos activos.</p>
+        <!-- Encabezado -->
+        <header>
+            <h2>Inicio</h2>
+            <div>
+                <time datetime="2026-09-30">30 Sept 2026</time>
+            </div>
+        </header>
 
-            <aside aria-label="Avisos del sistema">
-                <p><strong>Recordatorio:</strong> Hay 5 devoluciones pendientes de superar el plazo limite esta semana. Revisar sección de préstamos.</p>
-            </aside>
+        <aside aria-label="Recordatorio">
+            <p><strong>Recordatorio:</strong> Mañana la biblioteca cerrará a las 18:00h</p>
+        </aside>
 
-            <section>
-                <h3>Resumen General</h3>
-                
-                <article>
-                    <h4>Socios Registrados</h4>
-                    <p><strong>1.240</strong></p>
-                    <p><small>+18 nuevos este mes</small></p>
-                </article>
+        <section aria-label="Resumen del día">
+            <article>
+                <h3>Préstamos hoy</h3>
+                <p><strong>24</strong></p>
+            </article>
 
-                <article>
-                    <h4>Préstamos Activos</h4>
-                    <p><strong>85</strong></p>
-                    <p><small>12 para devolver hoy</small></p>
-                </article>
+            <article>
+                <h3>Devoluciones pendientes</h3>
+                <p><strong>12</strong></p>
+            </article>
 
-                <article>
-                    <h4>Libros en Catálogo</h4>
-                    <p><strong>3.450</strong></p>
-                    <p><small>Disponibles en sala/préstamo</small></p>
-                </article>
+            <article>
+                <h3>Préstamos fuera de plazo</h3>
+                <p><strong>5</strong></p>
+            </article>
 
-                <article>
-                    <h4>Devoluciones Pendientes</h4>
-                    <p><strong>5</strong></p>
-                    <p><small>Requieren aviso a socio</small></p>
-                </article>
-            </section>
-
-            <section>
-                <h3>Préstamos Recientes</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Socio</th>
-                            <th>Título del Libro</th>
-                            <th>Fecha Préstamo</th>
-                            <th>Fecha Límite</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#PR-8041</td>
-                            <td>Jorge Martínez González</td>
-                            <td>El problema de los tres cuerpos</td>
-                            <td>01/10/2026</td>
-                            <td>15/10/2026</td>
-                            <td><span>Activo</span></td>
-                        </tr>
-                        <tr>
-                            <td>#PR-8039</td>
-                            <td>Laura Gómez Pérez</td>
-                            <td>Clean Code</td>
-                            <td>20/09/2026</td>
-                            <td>04/10/2026</td>
-                            <td><span>Pendiente</span></td>
-                        </tr>
-                        <tr>
-                            <td>#PR-8035</td>
-                            <td>Carlos Guijarro Mínguez</td>
-                            <td>Dune</td>
-                            <td>15/09/2026</td>
-                            <td>29/09/2026</td>
-                            <td><span>Devuelto</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Accesos Rápidos -->
-            <section>
-                <h3>Acciones Rápidas</h3>
-                <ul>
-                    <li><a href="#socios">+ Registrar Nuevo Socio</a></li>
-                    <li><a href="#prestamos">+ Registrar Nuevo Préstamo</a></li>
-                    <li><a href="#catalogo">+ Añadir Libro al Catálogo</a></li>
-                </ul>
-            </section>
+            <article>
+                <h3>Socios activos</h3>
+                <p><strong>850</strong></p>
+            </article>
         </section>
-    </main>
 
-    <footer>
-        <p>BiblioGest - Versión 1.0 | Sistema de Gestión de Biblioteca</p>
-    </footer>
+        <section aria-label="Acciones rápidas">
+            <button type="button">Registrar Préstamo</button>
+            <button type="button">Devolución</button>
+            <button type="button">Hacer Carnet Nuevo</button>
+            <button type="button">Alta Libro</button>
+            <button type="button">Ver Sanciones</button>
+        </section>
+
+        <div class="panel-dashboard">
+            <!-- Columna Izquierda  -->
+            <div class="columna-principal">
+                <section>
+                    <h3>Próximas Devoluciones</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Socio</th>
+                                <th>Libro</th>
+                                <th>Hora Límite</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jorge Martínez</td>
+                                <td>Odisea</td>
+                                <td>18:00</td>
+                                <td><span>Pendiente</span></td>
+                                <td>
+                                    <button type="button">Ver</button>
+                                    <button type="button">Editar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lucia Hernández</td>
+                                <td>Ilíada</td>
+                                <td>19:00</td>
+                                <td><span>Devuelto</span></td>
+                                <td>
+                                    <button type="button">Ver</button>
+                                    <button type="button">Editar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Irene Marí</td>
+                                <td>Beloved</td>
+                                <td>20:00</td>
+                                <td><span>Devuelto</span></td>
+                                <td>
+                                    <button type="button">Ver</button>
+                                    <button type="button">Editar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h3>Libros Más Solicitados</h3>
+                    <ol>
+                        <li>
+                            <span>El Quijote</span>
+                            <span>2 disponibles</span>
+                        </li>
+                        <li>
+                            <span>1984</span>
+                            <span>1 disponible</span>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="columna-secundaria">
+                <section>
+                    <h3>Socios con Sanciones</h3>
+                    <ul>
+                        <li>
+                            <span>Jorge Martínez</span>
+                            <span>€4.50</span>
+                            <button type="button">Ver Ficha</button>
+                        </li>
+                        <li>
+                            <span>Lucia Hernández</span>
+                            <span>€2.20</span>
+                            <button type="button">Ver Ficha</button>
+                        </li>
+                        <li>
+                            <span>Irene Marí</span>
+                            <span>€1.80</span>
+                            <button type="button">Ver Ficha</button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Reservas para Recogida</h3>
+                    <ul>
+                        <li>
+                            <span>El gran Gatsby</span>
+                            <time datetime="2026-10-02">2 Oct 2026</time>
+                            <span>Listo</span>
+                        </li>
+                        <li>
+                            <span>El ruido y la furia</span>
+                            <time datetime="2026-10-08">8 Oct 2026</time>
+                            <span>Pendiente</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
