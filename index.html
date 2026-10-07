@@ -2,61 +2,126 @@
 <html lang="es">
 
 <head>
-    <!-- Configuración básica del documento para el navegador. -->
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sport Center Manager</title>
+    <title>BiblioGest - Panel Principal (Dashboard)</title>
 </head>
 
 <body>
-    <!-- Cabecera general de la aplicación. -->
+    <!-- Cabecera general de la aplicación BiblioGest -->
     <header>
-        <h1>Sport Center Manager</h1>
-        <p>Gestión del centro deportivo</p>
+        <h1>BiblioGest</h1>
+        <p>Sistema de Gestión de Biblioteca</p>
     </header>
-    <!-- aside contiene información complementaria al contenido principal.
-En esta aplicación se utiliza para colocar el menú lateral. -->
+
+    <!-- Menú lateral de navegación principal -->
     <aside>
         <nav>
             <h2>Menú principal</h2>
             <ul>
-                <li><a href="#dashboard">Panel principal</a></li>
-                <li><a href="#clientes">Clientes</a></li>
-                <li><a href="#personal">Personal</a></li>
-                <li><a href="#actividades">Actividades</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#inventario">Inventario</a></li>
+                <li><a href="#dashboard">Panel Principal</a></li>
+                <li><a href="#socios">Gestión de Socios</a></li>
+                <li><a href="#catalogo">Catálogo de Libros</a></li>
+                <li><a href="#prestamos">Préstamos y Devoluciones</a></li>
                 <li><a href="#configuracion">Configuración</a></li>
             </ul>
         </nav>
     </aside>
-    <!-- main contiene el contenido principal de la pantalla.
-Solo debe haber un elemento main en cada página. -->
+
     <main>
-        <!-- section agrupa contenido relacionado.
-Esta sección representa el panel principal. -->
         <section id="dashboard">
-            <h2>Panel principal</h2>
-            <p>Resumen de la actividad del centro deportivo.</p>
+            <h2>Panel Principal</h2>
+            <p>Resumen general del estado del catálogo, socios y préstamos activos.</p>
+
+            <aside aria-label="Avisos del sistema">
+                <p><strong>Recordatorio:</strong> Hay 5 devoluciones pendientes de superar el plazo limite esta semana. Revisar sección de préstamos.</p>
+            </aside>
+
             <section>
-                <h3>Resumen</h3>
+                <h3>Resumen General</h3>
+                
                 <article>
-                    <h4>Clientes activos</h4>
-                    <p>0</p>
+                    <h4>Socios Registrados</h4>
+                    <p><strong>1.240</strong></p>
+                    <p><small>+18 nuevos este mes</small></p>
                 </article>
+
                 <article>
-                    <h4>Reservas de hoy</h4>
-                    <p>0</p>
+                    <h4>Préstamos Activos</h4>
+                    <p><strong>85</strong></p>
+                    <p><small>12 para devolver hoy</small></p>
                 </article>
+
                 <article>
-                    <h4>Actividades programadas</h4>
-                    <p>0</p>
+                    <h4>Libros en Catálogo</h4>
+                    <p><strong>3.450</strong></p>
+                    <p><small>Disponibles en sala/préstamo</small></p>
                 </article>
+
+                <article>
+                    <h4>Devoluciones Pendientes</h4>
+                    <p><strong>5</strong></p>
+                    <p><small>Requieren aviso a socio</small></p>
+                </article>
+            </section>
+
+            <section>
+                <h3>Préstamos Recientes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Socio</th>
+                            <th>Título del Libro</th>
+                            <th>Fecha Préstamo</th>
+                            <th>Fecha Límite</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PR-8041</td>
+                            <td>Jorge Martínez González</td>
+                            <td>El problema de los tres cuerpos</td>
+                            <td>01/10/2026</td>
+                            <td>15/10/2026</td>
+                            <td><span>Activo</span></td>
+                        </tr>
+                        <tr>
+                            <td>#PR-8039</td>
+                            <td>Laura Gómez Pérez</td>
+                            <td>Clean Code</td>
+                            <td>20/09/2026</td>
+                            <td>04/10/2026</td>
+                            <td><span>Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>#PR-8035</td>
+                            <td>Carlos Guijarro Mínguez</td>
+                            <td>Dune</td>
+                            <td>15/09/2026</td>
+                            <td>29/09/2026</td>
+                            <td><span>Devuelto</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Accesos Rápidos -->
+            <section>
+                <h3>Acciones Rápidas</h3>
+                <ul>
+                    <li><a href="#socios">+ Registrar Nuevo Socio</a></li>
+                    <li><a href="#prestamos">+ Registrar Nuevo Préstamo</a></li>
+                    <li><a href="#catalogo">+ Añadir Libro al Catálogo</a></li>
+                </ul>
             </section>
         </section>
     </main>
+
     <footer>
-        <p>Sport Center Manager - Versión 1.0</p>
+        <p>BiblioGest - Versión 1.0 | Sistema de Gestión de Biblioteca</p>
     </footer>
 </body>
 
