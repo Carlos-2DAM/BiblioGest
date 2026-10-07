@@ -1,0 +1,77 @@
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.usuario {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera button {
+    margin-right: 60px;
+}
+
+
+
+.novedades {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.acciones {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+
+.panel-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+.columna-principal,
+.columna-secundaria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

@@ -2,183 +2,248 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BiblioGest - Inicio</title>
-    <link rel="stylesheet" href="css/styles.css"/>
-    
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Menú Lateral -->
-    <aside>
-        <h1>BiblioGest</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#prestamos">Préstamos</a></li>
-                <li><a href="#socios">Socios</a></li>
-                <li><a href="#configuracion">Configuración</a></li>
-            </ul>
-        </nav>
 
-        <!-- Perfil de usuario (footer) -->
-        <div>
-            <p><strong>Bibliotecario / Admin</strong></p>
-            <p><h5>Sesión activa</h5></p>
-        </div>
-    </aside>
+    <div class="layout">
 
-    <main>
-        <!-- Encabezado -->
-        <header>
-            <h2>Inicio</h2>
-            <div>
-                <time datetime="2026-09-30">30 Sept 2026</time>
+        <!-- Menú lateral -->
+        <aside class="menu-lateral">
+
+            <h1>BiblioGest</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#prestamos">Préstamos</a></li>
+                    <li><a href="#socios">Socios</a></li>
+                    <li><a href="#configuracion">Configuración</a></li>
+                </ul>
+            </nav>
+
+            <div class="usuario">
+                <p><strong>Bibliotecario / Admin</strong></p>
+                <p>Sesión activa</p>
             </div>
-        </header>
 
-        <aside aria-label="Recordatorio">
-            <p><strong>Recordatorio:</strong> Mañana la biblioteca cerrará a las 18:00h</p>
         </aside>
 
-        <section aria-label="Resumen del día">
-            <article>
-                <h3>Préstamos hoy</h3>
-                <p><strong>24</strong></p>
-            </article>
 
-            <article>
-                <h3>Devoluciones pendientes</h3>
-                <p><strong>12</strong></p>
-            </article>
+        <main>
 
-            <article>
-                <h3>Préstamos fuera de plazo</h3>
-                <p><strong>5</strong></p>
-            </article>
+            <header class="cabecera">
+                <h2>Inicio</h2>
 
-            <article>
-                <h3>Socios activos</h3>
-                <p><strong>850</strong></p>
-            </article>
-        </section>
+                <div>
+                    <button type="button">30 Sept 2026</button>
+                </div>
+            </header>
 
-        <section aria-label="Acciones rápidas">
-            <button type="button">Registrar Préstamo</button>
-            <button type="button">Devolución</button>
-            <button type="button">Hacer Carnet Nuevo</button>
-            <button type="button">Alta Libro</button>
-            <button type="button">Ver Sanciones</button>
-        </section>
 
-        <div class="panel-dashboard">
-            <!-- Columna Izquierda  -->
-            <div class="columna-principal">
-                <section>
-                    <h3>Próximas Devoluciones</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Socio</th>
-                                <th>Libro</th>
-                                <th>Hora Límite</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Jorge Martínez</td>
-                                <td>Odisea</td>
-                                <td>18:00</td>
-                                <td><span>Pendiente</span></td>
-                                <td>
-                                    <button type="button">Ver</button>
-                                    <button type="button">Editar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lucia Hernández</td>
-                                <td>Ilíada</td>
-                                <td>19:00</td>
-                                <td><span>Devuelto</span></td>
-                                <td>
-                                    <button type="button">Ver</button>
-                                    <button type="button">Editar</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Irene Marí</td>
-                                <td>Beloved</td>
-                                <td>20:00</td>
-                                <td><span>Devuelto</span></td>
-                                <td>
-                                    <button type="button">Ver</button>
-                                    <button type="button">Editar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+            <aside class="novedades" aria-label="Novedades">
+                <p>
+                    <strong>Novedades:</strong>
+                    Descubre las últimas incorporaciones al catálogo y encuentra tu próxima lectura.
+                </p>
+            </aside>
 
-                <section>
-                    <h3>Libros Más Solicitados</h3>
-                    <ol>
-                        <li>
-                            <span>El Quijote</span>
-                            <span>2 disponibles</span>
-                        </li>
-                        <li>
-                            <span>1984</span>
-                            <span>1 disponible</span>
-                        </li>
-                    </ol>
-                </section>
+
+            <section class="resumen" aria-label="Resumen del día">
+
+                <article>
+                    <h3>Préstamos hoy</h3>
+                    <h2>24</h2>
+                </article>
+
+                <article>
+                    <h3>Devoluciones pendientes</h3>
+                    <h2>12</h2>
+                </article>
+
+                <article>
+                    <h3>Préstamos fuera de plazo</h3>
+                    <h2>5</h2>
+                </article>
+
+                <article>
+                    <h3>Socios activos</h3>
+                    <h2>850</h2>
+                </article>
+
+            </section>
+
+
+            <section class="acciones" aria-label="Acciones rápidas">
+                <button type="button">Registrar Préstamo</button>
+                <button type="button">Devolución</button>
+                <button type="button">Hacer Carnet Nuevo</button>
+                <button type="button">Alta Libro</button>
+                <button type="button">Ver Sanciones</button>
+
+            </section>
+
+
+            <div class="panel-dashboard">
+
+                <!-- Columna izquierda -->
+                <div class="columna-principal">
+
+                    <section>
+                        <h3>Próximas Devoluciones</h3>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Socio</th>
+                                    <th>Libro</th>
+                                    <th>Hora Límite</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Jorge Martínez</td>
+                                    <td>Odisea</td>
+                                    <td>18:00</td>
+                                    <td><span>Pendiente</span></td>
+                                    <td>
+                                        <button type="button">Ver</button>
+                                        <button type="button">Editar</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Lucia Hernández</td>
+                                    <td>Ilíada</td>
+                                    <td>19:00</td>
+                                    <td><span>Devuelto</span></td>
+                                    <td>
+                                        <button type="button">Ver</button>
+                                        <button type="button">Editar</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Irene Marí</td>
+                                    <td>Beloved</td>
+                                    <td>20:00</td>
+                                    <td><span>Devuelto</span></td>
+                                    <td>
+                                        <button type="button">Ver</button>
+                                        <button type="button">Editar</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </section>
+
+
+                    <section>
+                        <h3>Libros Más Solicitados</h3>
+
+                        <ol>
+                            <li>
+                                <span>El Quijote</span>
+                                <span>2 disponibles</span>
+                            </li>
+
+                            <li>
+                                <span>1984</span>
+                                <span>1 disponible</span>
+                            </li>
+                        </ol>
+
+                    </section>
+
+                </div>
+
+
+                <!-- Columna derecha -->
+                <div class="columna-secundaria">
+
+                    <section>
+                        <h3>Socios con Sanciones</h3>
+
+                        <ul>
+
+                            <li>
+                                <span>Jorge Martínez</span>
+                                <span>€4.50</span>
+                                <button type="button">Ver Ficha</button>
+                            </li>
+
+                            <li>
+                                <span>Lucia Hernández</span>
+                                <span>€2.20</span>
+                                <button type="button">Ver Ficha</button>
+                            </li>
+
+                            <li>
+                                <span>Irene Marí</span>
+                                <span>€1.80</span>
+                                <button type="button">Ver Ficha</button>
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+
+                    <section>
+                        <h3>Reservas para Recogida</h3>
+
+                        <ul>
+
+                            <li>
+                                <span>El gran Gatsby</span>
+                                <time datetime="2026-10-02">2 Oct 2026</time>
+                                <span>Listo</span>
+                            </li>
+
+                            <li>
+                                <span>El ruido y la furia</span>
+                                <time datetime="2026-10-08">8 Oct 2026</time>
+                                <span>Pendiente</span>
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                </div>
+
             </div>
 
-            <!-- Columna Derecha -->
-            <div class="columna-secundaria">
-                <section>
-                    <h3>Socios con Sanciones</h3>
-                    <ul>
-                        <li>
-                            <span>Jorge Martínez</span>
-                            <span>€4.50</span>
-                            <button type="button">Ver Ficha</button>
-                        </li>
-                        <li>
-                            <span>Lucia Hernández</span>
-                            <span>€2.20</span>
-                            <button type="button">Ver Ficha</button>
-                        </li>
-                        <li>
-                            <span>Irene Marí</span>
-                            <span>€1.80</span>
-                            <button type="button">Ver Ficha</button>
-                        </li>
-                    </ul>
-                </section>
+        </main>
 
-                <section>
-                    <h3>Reservas para Recogida</h3>
-                    <ul>
-                        <li>
-                            <span>El gran Gatsby</span>
-                            <time datetime="2026-10-02">2 Oct 2026</time>
-                            <span>Listo</span>
-                        </li>
-                        <li>
-                            <span>El ruido y la furia</span>
-                            <time datetime="2026-10-08">8 Oct 2026</time>
-                            <span>Pendiente</span>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-    </main>
+    </div>
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2026 BiblioGest · Biblioteca Municipal</p>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
