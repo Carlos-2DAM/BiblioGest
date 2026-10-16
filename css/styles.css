@@ -1,0 +1,138 @@
+
+:root {
+    --color-principal-menu: #1E293B;
+    --color-secundario-botones: #1E293B;
+    --color-fondo: #F8FAFC;
+    --color-cards-tablas: #FFFFFF;
+    --color-exito-fondo: #A7F3D0;
+    --color-exito-texto: #059669;
+    --color-recordatorio-fondo: #FAFEBF;
+    --color-recordatorio-pendiente-texto: #D8C21D;
+}
+
+body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1E293B;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.menu-lateral a, 
+.menu-lateral button {
+    color: #FFFFFF;
+}
+
+.usuario {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cabecera button {
+    margin-right: 60px;
+    background-color: #1E293B;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cabecera button:hover {
+    opacity: 0.9;
+}
+
+.novedades {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px;
+}
+
+.resumen > div, 
+.card, 
+table {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.acciones {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.panel-dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.columna-principal,
+.columna-secundaria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+.mensaje-exito {
+    background-color: #A7F3D0;
+    color: #059669;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.recordatorio {
+    background-color: #FAFEBF;
+    color: #D8C21D;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.pendiente {
+    color: #D8C21D;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    color: #1E293B;
+    border-top: 1px solid #e2e8f0;
+}
