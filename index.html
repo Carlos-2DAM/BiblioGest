@@ -131,8 +131,8 @@
                                     <td>18:00</td>
                                     <td><span class="pendiente">Pendiente</span></td>
                                     <td>
-                                        <button type="button">Ver</button>
-                                        <button type="button">Editar</button>
+                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
 
@@ -142,8 +142,8 @@
                                     <td>19:00</td>
                                     <td><span>Devuelto</span></td>
                                     <td>
-                                        <button type="button">Ver</button>
-                                        <button type="button">Editar</button>
+                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
 
@@ -153,8 +153,8 @@
                                     <td>20:00</td>
                                     <td><span>Devuelto</span></td>
                                     <td>
-                                        <button type="button">Ver</button>
-                                        <button type="button">Editar</button>
+                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -164,16 +164,24 @@
                     <section>
                         <h3>Libros Más Solicitados</h3>
 
-                        <ol>
-                            <li>
-                                <span>El Quijote</span>
-                                <span>2 disponibles</span>
-                            </li>
-                            <li>
-                                <span>1984</span>
-                                <span>1 disponible</span>
-                            </li>
-                        </ol>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Libro</th>
+                                    <th>Disponibilidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>El Quijote</td>
+                                    <td>2 disponibles</td>
+                                </tr>
+                                <tr>
+                                    <td>1984</td>
+                                    <td>1 disponible</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
 
                 </div>
@@ -184,40 +192,58 @@
                     <section>
                         <h3>Socios con Sanciones</h3>
 
-                        <ul>
-                            <li>
-                                <span>Jorge Martínez</span>
-                                <span>€4.50</span>
-                                <button type="button">Ver Ficha</button>
-                            </li>
-                            <li>
-                                <span>Lucía Hernández</span>
-                                <span>€2.20</span>
-                                <button type="button">Ver Ficha</button>
-                            </li>
-                            <li>
-                                <span>Irene Marí</span>
-                                <span>€1.80</span>
-                                <button type="button">Ver Ficha</button>
-                            </li>
-                        </ul>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Socio</th>
+                                    <th>Importe</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jorge Martínez</td>
+                                    <td>€4.50</td>
+                                    <td><button type="button"><i class="bi bi-eye"></i> Ver Ficha</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Lucía Hernández</td>
+                                    <td>€2.20</td>
+                                    <td><button type="button"><i class="bi bi-eye"></i> Ver Ficha</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Irene Marí</td>
+                                    <td>€1.80</td>
+                                    <td><button type="button"><i class="bi bi-eye"></i> Ver Ficha</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
 
                     <section>
                         <h3>Reservas para Recogida</h3>
 
-                        <ul>
-                            <li>
-                                <span>El gran Gatsby</span>
-                                <time datetime="2026-10-02">2 Oct 2026</time>
-                                <span class="listo">Listo</span>
-                            </li>
-                            <li>
-                                <span>El ruido y la furia</span>
-                                <time datetime="2026-10-08">8 Oct 2026</time>
-                                <span class="pendiente">Pendiente</span>
-                            </li>
-                        </ul>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Libro</th>
+                                    <th>Fecha de recogida</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>El gran Gatsby</td>
+                                    <td><time datetime="2026-10-02">2 Oct 2026</time></td>
+                                    <td><span class="listo">Listo</span></td>
+                                </tr>
+                                <tr>
+                                    <td>El ruido y la furia</td>
+                                    <td><time datetime="2026-10-08">8 Oct 2026</time></td>
+                                    <td><span class="pendiente">Pendiente</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
 
                 </div>

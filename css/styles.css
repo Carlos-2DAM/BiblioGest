@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-    --color-principal: #1E293B;
-    --color-fondo: #F8FAFC;
-    --color-superficie: #FFFFFF;
-    --color-texto: #1E293B;
-    --color-borde: #E2E8F0;
-    --color-exito-fondo: #A7F3D0;
-    --color-exito-texto: #059669;
-    --color-aviso-fondo: #FAFEBF;
-    --color-aviso-texto: #D8C21D;
-    --boton-principal: #2563EB;
-    --boton-secundario: #666666;
+    --color-principal: #2E2A24;
+    --color-superficie: #F7F0E6;
+    --color-texto: #2E2A24;
+    --color-borde: #D8CDB8;
+    --color-exito-fondo: #DCE8D6;
+    --color-exito-texto: #3D5B42;
+    --color-aviso-fondo: #F2E6B8;
+    --color-aviso-texto: #7B6031;
+    --boton-principal: #7A6A46;
+    --boton-secundario: #5B5047;
+    --hover-azul: #465B6B;
+    --hover-verde: #586B52;
+    --hover-ambar: #B98A3D;
 }
-
 * {
     box-sizing: border-box;
 }
@@ -27,10 +28,7 @@ body {
     color: var(--color-texto);
     font-family: "Plus Jakarta Sans", Arial, sans-serif;
     font-size: 14px;
-    background-image: 
-        linear-gradient(rgba(49, 77, 105, 0.55), rgba(49, 77, 105, 0.55)),
-        url("../images/background-img.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../images/background-img.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -79,15 +77,15 @@ main {
 .menu-lateral {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: #1E293B;
-    color: #FFFFFF;
+    height: 100%;
+    background-color: var(--color-principal);
+    color: #F7F0E6;
     padding: 20px;
 }
 
 .menu-lateral a, 
 .menu-lateral button {
-    color: #FFFFFF;
+    color: #F7F0E6;
 }
 
 /* Logo */
@@ -95,6 +93,7 @@ main {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-bottom: 30px;
 }
 
 .logo img {
@@ -110,7 +109,7 @@ main {
 }
 
 .menu-lateral li + li {
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .menu-lateral a {
@@ -119,25 +118,23 @@ main {
     gap: 10px;
     padding: 11px 12px;
     border-radius: 8px;
-    background-color: #172554;
-    color: #94A3B8;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #E6D9C4;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menu-lateral a:hover {
-    background-color: #1E40AF;
-    color: white;
+    background-color: rgba(122, 106, 70, 0.35);
+    color: #F7F0E6;
 }
 
 .menu-lateral a:focus-visible {
-    outline: 2px solid #93C5FD;
-    outline-offset: 2px;
+    outline: 2px solid #F7F0E6;
 }
 
 .menu-lateral a.enlace-activo {
-    background-color: #3B82F6;
-    color: white;
+    background-color: rgba(122, 106, 70, 0.9);
+    color: #F7F0E6;
     font-weight: 600;
 }
 
@@ -178,7 +175,6 @@ main {
     margin-bottom: 24px;
     background-color: #FFFFFF;
     padding: 15px 20px;
-    border: 1px solid var(--color-borde);
     border-radius: 12px;
 }
 
@@ -205,23 +201,14 @@ button {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15);
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-    background-color: #1D4ED8;
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
-    transform: translateY(-2px);
-}
-
-button:active {
-    transform: translateY(0);
+    background-color: var(--hover-ambar);
 }
 
 button:focus-visible {
-    outline: 2px solid #93C5FD;
-    outline-offset: 3px;
+    outline: 2px solid var(--color-principal);
 }
 
 .cabecera button,
@@ -232,7 +219,7 @@ td button + button {
 
 .cabecera button:hover,
 td button + button:hover {
-    background-color: #475569;
+    background-color: var(--hover-azul);
 }
 
 /* Novedades y Alertas */
@@ -278,13 +265,6 @@ td button + button:hover {
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.resumen article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
 .resumen article h3 {
@@ -300,7 +280,6 @@ td button + button:hover {
     color: var(--boton-principal);
 }
 
-/* Acciones rápidas */
 .acciones {
     display: flex;
     flex-wrap: wrap;
@@ -323,14 +302,12 @@ td button + button:hover {
     color: var(--color-texto);
     border: 1px solid var(--color-borde);
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.04);
 }
 
 .acciones button:hover {
-    background-color: #EFF6FF;
-    color: var(--boton-principal);
-    border-color: #BFDBFE;
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+    background-color: rgba(184, 138, 61, 0.12);
+    color: var(--color-texto);
+    border-color: var(--hover-ambar);
 }
 
 /* Panel del dashboard */
@@ -355,7 +332,6 @@ td button + button:hover {
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
 }
 
 /* Tablas */
@@ -387,11 +363,11 @@ td {
 }
 
 tbody tr {
-    transition: background-color 0.2s ease;
+    background-color: white;
 }
 
 tbody tr:hover {
-    background-color: #F8FAFC;
+    background-color: rgba(122, 106, 70, 0.08);
 }
 
 tbody tr:last-child td {
@@ -402,6 +378,11 @@ td button,
 .panel-dashboard li button {
     padding: 7px 12px;
     font-size: 13px;
+}
+
+ td button + button,
+ .panel-dashboard li button + button {
+    margin-left: 8px;
 }
 
 /* Estados en tablas y listas */
@@ -473,11 +454,10 @@ footer a {
     color: var(--color-principal);
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease;
 }
 
 footer a:hover {
-    color: var(--boton-principal);
+    color: var(--hover-azul);
 }
 
 /* Menú hamburguesa: oculto en escritorio */
@@ -489,13 +469,15 @@ footer a:hover {
     display: none;
 }
 
-/* Adaptación a móviles (Responsive) */
+
+
+
+
+/* RESPONSIVE  tablet */
 @media (max-width: 800px) {
     .layout {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-areas:
-            "sidebar"
-            "contenido";
+        grid-template-columns: 1fr;
+        grid-template-areas: "sidebar" "contenido";
     }
 
     .menu-contenedor {
@@ -508,35 +490,29 @@ footer a:hover {
     .btn-hamburguesa {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
         width: 100%;
         height: 52px;
-        margin: 0;
         padding: 0 18px;
         background-color: var(--color-principal);
         color: white;
         font-size: 30px;
-        line-height: 1;
         cursor: pointer;
-        box-shadow: none;
         border-radius: 0;
+        box-shadow: none;
     }
 
     .btn-hamburguesa:hover {
         background-color: #334155;
-        box-shadow: none;
-        transform: none;
     }
 
     .btn-hamburguesa:focus-visible {
-        outline: 2px solid #93C5FD;
-        outline-offset: -2px;
+        outline: 2px solid white;
     }
 
+    /* Menú desplegable */
     .menu-contenedor .menu-lateral {
         display: none;
         width: 100%;
-        min-height: 0;
         max-height: calc(100vh - 52px);
         overflow-y: auto;
         padding: 20px 16px;
@@ -546,12 +522,13 @@ footer a:hover {
 
     #menu-toggle:checked ~ .menu-lateral {
         display: flex;
+        flex-direction: column;
     }
 
     .menu-lateral ul {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
     }
 
     .menu-lateral li + li {
@@ -568,11 +545,11 @@ footer a:hover {
     }
 
     .resumen {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .panel-dashboard {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .panel-dashboard section {
@@ -592,10 +569,10 @@ footer a:hover {
     }
 }
 
-/* Móviles estrechos */
+/* Responsive  móviles */
 @media (max-width: 400px) {
     .resumen {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .cabecera button {
