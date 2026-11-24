@@ -28,7 +28,8 @@ body {
     color: var(--color-texto);
     font-family: "Plus Jakarta Sans", Arial, sans-serif;
     font-size: 14px;
-    background-image: url("../images/background-img.jpg");
+    background-color: var(--boton-secundario);
+    /* background-image: url("../images/background-img.jpg"); */
     background-size: cover;
     background-position: center;
 }
