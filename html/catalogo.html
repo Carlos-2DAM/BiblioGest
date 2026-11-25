@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>BiblioGest - Catálogo</title>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="menu-contenedor">
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="btn-hamburguesa" aria-label="Abrir o cerrar menú">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <aside class="menu-lateral" id="menu-lateral">
+
+                <div class="logo">
+                    <img src="../images/logo.png" alt="Logo de BiblioGest">
+                    <h1>BiblioGest</h1>
+                </div>
+
+                <!--
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="enlace-activo"><i class="bi bi-house-door"></i> Inicio</a></li>
+                        <li><a href="catalogo.html"><i class="bi bi-book"></i> Catálogo</a></li>
+                        <li><a href="prestamos.html"><i class="bi bi-box-arrow-in-right"></i> Préstamos</a></li>
+                        <li><a href="socios.html"><i class="bi bi-people"></i> Socios</a></li>
+                        <li><a href="#configuracion"><i class="bi bi-gear"></i> Configuración</a></li>
+                    </ul>
+                </nav>
+                -->
+                <nav>
+                    <ul>
+                        <li><a href="#inicio"><i class="bi bi-house-door"></i> Inicio</a></li>
+                        <li><a href="#catalogo" class="enlace-activo"><i class="bi bi-book"></i> Catálogo</a></li>
+                        <li><a href="#prestamos"><i class="bi bi-box-arrow-in-right"></i> Préstamos</a></li>
+                        <li><a href="#socios"><i class="bi bi-people"></i> Socios</a></li>
+                        <li><a href="#configuracion"><i class="bi bi-gear"></i> Configuración</a></li>
+                    </ul>
+                </nav>
+
+                <div class="usuario">
+                    <p><strong>Bibliotecario / Admin</strong></p>
+                    <p>Sesión activa</p>
+                    <p><a href="#">Cerrar sesión</a></p>
+                </div>
+
+            </aside>
+
+        </div>
+
+        <main id="catalogo" class="vista">
+            <header class="cabecera">
+                <div class="saludo-admin">
+                    <h2>Catálogo</h2>
+                    <p>Todos los libros de la biblioteca</p>
+                </div>
+
+                <div>
+                    <button type="button">{{fecha-actual}}</button>
+                </div>
+            </header>
+
+            <!--Titulo lista y boton alta-->
+            <section class="barra-titulo" aria-label="Título del listado">
+                <h3 class="titulo-listado">Listado de Libros</h3>
+                <button type="button"><i class="bi bi-plus-lg"></i> Alta Libro</button>
+            </section>
+
+            <!--Buscador + filtros-->
+            <section class="barra-filtros" aria-label="Búsqueda y filtros">
+                <div class="buscador">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Buscar libro por título, autor o ISBN..."
+                        aria-label="Buscar libro">
+                </div>
+                <button type="button" class="btn-claro">Filtros</button>
+                <button type="button" class="btn-claro">Ordenar</button>
+            </section>
+
+            <!--Libros-->
+            <section class="tabla-caja" aria-label="Tabla de libros">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ISBN</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>978-84-376-0494-7</td>
+                            <td>El Quijote</td>
+                            <td>Miguel de Cervantes</td>
+                            <td>Clásicos</td>
+                            <td><span class="listo">Disponible</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>978-84-233-4676-4</td>
+                            <td>1984</td>
+                            <td>George Orwell</td>
+                            <td>Ciencia ficción</td>
+                            <td><span class="listo">Disponible</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>978-84-376-0496-1</td>
+                            <td>Odisea</td>
+                            <td>Homero</td>
+                            <td>Clásicos</td>
+                            <td><span class="pendiente">Prestado</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>978-84-376-0495-4</td>
+                            <td>Ilíada</td>
+                            <td>Homero</td>
+                            <td>Clásicos</td>
+                            <td><span class="listo">Disponible</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>978-84-663-1234-5</td>
+                            <td>Beloved</td>
+                            <td>Toni Morrison</td>
+                            <td>Novela</td>
+                            <td><span class="pendiente">Prestado</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>978-84-206-3457-8</td>
+                            <td>El gran Gatsby</td>
+                            <td>F. Scott Fitzgerald</td>
+                            <td>Novela</td>
+                            <td><span class="reservado">Reservado</span></td>
+                            <td>
+                                <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
+                                <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--`Paginacion-->
+            <section class="barra-paginacion" aria-label="Paginación">
+                <p>Mostrando 1-6 de 1.240 libros</p>
+
+                <div class="paginacion">
+                    <a href="#" aria-label="Página anterior">&lt;</a>
+                    <a href="#" class="pagina-activa">1</a>
+                    <a href="#">2</a>
+                    <a href="#" aria-label="Página siguiente">&gt;</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <ul>
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+
+        <p>© 2026 BiblioGest · Biblioteca Municipal</p>
+    </footer>
+
+    <!--El modal-->
+    <dialog id="modal-libro">
+        <h2 id="modal-titulo"></h2>
+        <p><strong>Autor:</strong> <span id="modal-autor"></span></p>
+        <p><strong>ISBN:</strong> <span id="modal-isbn"></span></p>
+        <p><strong>Categoría:</strong> <span id="modal-categoria"></span></p>
+        <p><strong>Estado:</strong> <span id="modal-estado"></span></p>
+        <button type="button" id="cerrar-modal">Cerrar</button>
+    </dialog>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/catalogo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+
+/* Novedades */
+.novedades {
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    background-color: var(--color-aviso-fondo);
+    border: 1px solid var(--color-aviso-texto);
+    border-radius: 10px;
+}
+
+/*las 4 tarjetas */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.resumen article {
+    padding: 22px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+}
+
+.resumen article h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+.resumen article h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--boton-principal);
+}
+
+/* Acciones rápidas */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 15px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+}
+
+.acciones button {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+}
+
+.acciones button:hover {
+    background-color: rgba(184, 138, 61, 0.12);
+    color: var(--color-texto);
+    border-color: var(--hover-ambar);
+}
+
+/*2 columnas*/
+.panel-dashboard {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.columna-principal,
+.columna-secundaria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.panel-dashboard section {
+    min-width: 0;
+    padding: 22px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+}
+
+/* Listas del panel */
+.panel-dashboard ol,
+.panel-dashboard ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.panel-dashboard li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.panel-dashboard li:last-child {
+    border-bottom: none;
+}
+
+.panel-dashboard li button {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.panel-dashboard li button + button {
+    margin-left: 8px;
+}
+
+.panel-dashboard li span {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.panel-dashboard li span.listo {
+    background-color: var(--color-exito-fondo);
+    color: var(--color-exito-texto);
+}
+
+.panel-dashboard li span.pendiente {
+    background-color: var(--color-aviso-fondo);
+    color: var(--color-aviso-texto);
+}
+
+.enlace-ver-mas {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--boton-principal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.enlace-ver-mas:hover {
+    color: var(--hover-ambar);
+    text-decoration: underline;
+}
+
+/*El modal*/
+/*El modal*/
+#modal-proximas-devoluciones {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(46, 42, 36, 0.6);
+}
+
+#modal-proximas-devoluciones.abierto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-proximas-devoluciones .modal-contenido {
+    position: relative;
+    width: min(90%, 420px);
+    padding: 24px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    color: var(--color-texto);
+}
+
+#cerrar-modal {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: #DC2626;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+#cerrar-modal:hover {
+    color: #991B1B;
+}
+
+#modal-proximas-devoluciones h2 {
+    margin-bottom: 16px;
+}
+
+#modal-proximas-devoluciones p {
+    margin-bottom: 8px;
+}
+/*RESPONSIVE: tablet*/
+@media (max-width: 800px) {
+    .resumen {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-dashboard section {
+        overflow-x: auto;
+    }
+
+    .panel-dashboard li {
+        flex-wrap: wrap;
+    }
+}
+
+/*RESPONSIVE: móviles*/
+@media (max-width: 400px) {
+    .resumen {
+        grid-template-columns: 1fr;
+    }
+}

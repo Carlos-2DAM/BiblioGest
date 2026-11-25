@@ -9,7 +9,7 @@ function crearVentana() {
   });
 
   // Cargamos la interfaz HTML local dentro de la ventana.
-  ventana.loadFile("index.html");
+  ventana.loadFile("html/index.html");
 }
 
 // Electron llamará a crearVentana cuando esté listo.

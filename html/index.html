@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>BiblioGest - Inicio</title>
@@ -29,9 +27,21 @@
             <aside class="menu-lateral" id="menu-lateral">
 
                 <div class="logo">
-                    <img src="images/logo.png" alt="Logo de BiblioGest">
+                    <img src="../images/logo.png" alt="Logo de BiblioGest">
                     <h1>BiblioGest</h1>
                 </div>
+
+                <!--
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="enlace-activo"><i class="bi bi-house-door"></i> Inicio</a></li>
+                        <li><a href="catalogo.html"><i class="bi bi-book"></i> Catálogo</a></li>
+                        <li><a href="prestamos.html"><i class="bi bi-box-arrow-in-right"></i> Préstamos</a></li>
+                        <li><a href="socios.html"><i class="bi bi-people"></i> Socios</a></li>
+                        <li><a href="#configuracion"><i class="bi bi-gear"></i> Configuración</a></li>
+                    </ul>
+                </nav>
+                -->
 
                 <nav>
                     <ul>
@@ -54,7 +64,7 @@
         </div>
 
         <!-- Contenido principal -->
-        <main id="inicio">
+        <main id="inicio" class="vista">
 
             <header class="cabecera">
                 <div class="saludo-admin">
@@ -102,7 +112,8 @@
                 <button type="button"><i class="bi bi-box-arrow-right"></i> Registrar Préstamo</button>
                 <button type="button"><i class="bi bi-box-arrow-in-left"></i> Devolución</button>
                 <button type="button"><i class="bi bi-person-badge"></i> Hacer Carnet Nuevo</button>
-                <button type="button"><i class="bi bi-journal-plus"></i> Alta Libro</button>
+                <button type="button" onclick="location.href='catalogo.html'"><i class="bi bi-journal-plus"></i> Alta
+                    Libro</button>
                 <button type="button"><i class="bi bi-exclamation-triangle"></i> Ver Sanciones</button>
             </section>
 
@@ -114,7 +125,7 @@
                     <section>
                         <h3>Próximas Devoluciones</h3>
 
-                        <table>
+                        <table id="proximas-devoluciones">
                             <thead>
                                 <tr>
                                     <th>Socio</th>
@@ -132,7 +143,7 @@
                                     <td>18:00</td>
                                     <td><span class="pendiente">Pendiente</span></td>
                                     <td>
-                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
                                         <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
@@ -143,7 +154,7 @@
                                     <td>19:00</td>
                                     <td><span>Devuelto</span></td>
                                     <td>
-                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
                                         <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
@@ -154,7 +165,7 @@
                                     <td>20:00</td>
                                     <td><span>Devuelto</span></td>
                                     <td>
-                                        <button type="button"><i class="bi bi-eye"></i> Ver</button>
+                                        <button type="button" class="btn-ver"><i class="bi bi-eye"></i> Ver</button>
                                         <button type="button"><i class="bi bi-pencil-square"></i> Editar</button>
                                     </td>
                                 </tr>
@@ -183,6 +194,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <a href="catalogo.html" class="enlace-ver-mas">Ver catálogo completo</a>
                     </section>
 
                 </div>
@@ -253,6 +265,27 @@
 
         </main>
 
+        <!-- Vistas menu.js -->
+        <section id="catalogo" class="vista" hidden>
+            <h2>Catálogo</h2>
+            <p>Vista de catálogo.</p>
+        </section>
+
+        <section id="prestamos" class="vista" hidden>
+            <h2>Préstamos</h2>
+            <p>Vista de préstamos.</p>
+        </section>
+
+        <section id="socios" class="vista" hidden>
+            <h2>Socios</h2>
+            <p>Vista de socios.</p>
+        </section>
+
+        <section id="configuracion" class="vista" hidden>
+            <h2>Configuración</h2>
+            <p>Vista de configuración.</p>
+        </section>
+
     </div>
 
     <!-- Pie de página -->
@@ -267,6 +300,19 @@
         <p>© 2026 BiblioGest · Biblioteca Municipal</p>
     </footer>
 
+    <!--El modal-->
+    <div id="modal-proximas-devoluciones" role="dialog" aria-modal="true" aria-labelledby="modal-socio">
+        <div class="modal-contenido">
+            <button type="button" id="cerrar-modal" aria-label="Cerrar modal">&times;</button>
+            <h2 id="modal-socio"></h2>
+            <p><strong>Libro:</strong> <span id="modal-libro"></span></p>
+            <p><strong>Hora Límite:</strong> <span id="modal-hora-limite"></span></p>
+            <p><strong>Estado:</strong> <span id="modal-estado"></span></p>
+        </div>
+    </div>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

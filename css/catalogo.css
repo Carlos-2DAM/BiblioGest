@@ -1,0 +1,135 @@
+
+.barra-titulo,
+.barra-filtros,
+.tabla-caja,
+.barra-paginacion {
+    margin-bottom: 24px;
+    padding: 15px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+}
+
+.barra-titulo,
+.barra-filtros,
+.barra-paginacion {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.barra-titulo,
+.barra-paginacion {
+    justify-content: space-between;
+}
+
+.titulo-listado {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Buscador */
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 280px;
+    max-width: 520px;
+    height: 40px;
+    padding: 0 14px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-texto);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Botón claro */
+.btn-claro {
+    background-color: #FFFFFF;
+    color: var(--color-texto);
+    border-color: var(--color-borde);
+}
+
+.btn-claro:hover {
+    background-color: rgba(184, 138, 61, 0.12);
+    color: var(--color-texto);
+    border-color: var(--hover-ambar);
+}
+
+.tabla-caja {
+    min-width: 0;
+    overflow-x: auto;
+}
+
+/* Estado "Reservado" */
+td span.reservado {
+    background-color: #DDE5EC;
+    color: var(--hover-azul);
+}
+
+/* Paginación */
+.barra-paginacion p {
+    font-weight: 700;
+}
+
+.paginacion {
+    display: flex;
+    gap: 8px;
+}
+
+.paginacion a {
+    padding: 8px 14px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    color: var(--color-texto);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.paginacion a:hover {
+    border-color: var(--hover-ambar);
+}
+
+.paginacion .pagina-activa {
+    background-color: var(--boton-principal);
+    border-color: var(--boton-principal);
+    color: #FFFFFF;
+}
+
+/*El modal*/
+#modal-libro {
+    width: min(90%, 420px);
+    padding: 24px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    color: var(--color-texto);
+}
+
+#modal-libro::backdrop {
+    background-color: rgba(46, 42, 36, 0.6);
+}
+
+#modal-libro h2 {
+    margin-bottom: 16px;
+}
+
+#modal-libro p {
+    margin-bottom: 8px;
+}
+
+#modal-libro button {
+    margin-top: 16px;
+}
